@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api.shoperapp.com/api/'
-
+  apiUrl: 'https://api.fanskora.com/api/'
 };
