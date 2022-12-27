@@ -1,0 +1,13 @@
+.content {
+  margin-inline-start: 260px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 0px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-inline-start: 0px;
+    padding: 30px;
+  }
+}

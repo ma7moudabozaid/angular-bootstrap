@@ -1,0 +1,27 @@
+{
+  "Lang": "EN",
+  "Dashboard": "لوحة التحكم",
+  "Home": "الرئيسيه",
+  "AddNew": "أضافة جديد",
+  "Edit":"تعديل",
+  "Save": "حفظ",
+  "Delete": "حذف",
+  "Close": "اغلاق",
+  "Actions": "أجراءات",
+  "Name": "الأسم",
+  "NameEn": " الأسم انجليزي",
+  "NameAr": " الأسم عربي",
+  "Description": "الوصف",
+  "Icon": "الايقونه",
+  "Image": "الصورة",
+  "Ordering": "الترتيب",
+  "Price": "السعر",
+  "Categories":"الاقسام",
+  "Products":"المنتجات",
+  "Users":"المستخدمون",
+  "Orders":"الطلبات",
+  "AreYouWantToDelete":"هل تريد الحذف؟"
+
+
+
+}

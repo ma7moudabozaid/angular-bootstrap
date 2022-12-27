@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-title">
+        <h1>{{ "Categories" | translate }}</h1>
+        <button class="btn btn-add" (click)="open()">
+          {{ "AddNew" | translate }}
+        </button>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="card-table" *ngIf="categories; let categories; else: loading">
+        <table class="table table-bordered table-sm table-striped1 table-responsive-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>{{ "Icon" | translate }}</th>
+              <th>{{ "Name" | translate }}</th>
+              <th>{{ "Description" | translate }}</th>
+              <th>{{ "Actions" | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr *ngFor="let item of categories | async; let i = index"> -->
+            <tr *ngFor="let item of categories ; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td> <i [class]="item.image"></i> </td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.desc }}</td>
+              <td>
+                <button class="btn btn-action" (click)="openModalEdit(item)">
+                  <i class="far fa-edit"></i>
+                </button>
+                <button class="btn btn-action" (click)="openModalDelete(item)">
+                  <i class="far fa-trash-alt"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="">
+        <ng-template #loading>
+          <div class="">
+            <app-loading></app-loading>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="col-md-12">
+
+    </div>
+  </div>
+</div>

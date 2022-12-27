@@ -1,0 +1,17 @@
+.main-nav {
+  width: 100%;
+  text-align: center;
+  background: #000;
+  z-index: 99;
+  position: relative;
+
+  a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}

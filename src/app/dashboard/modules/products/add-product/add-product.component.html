@@ -1,0 +1,58 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ item ? ("Edit" | translate ) : ("AddNew" | translate )}}</h4>
+
+  <button type="button" class="btn close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="formGroup" (ngSubmit)="CreatData()">
+  <div class="modal-body">
+    <div class="card-form">
+      <div class="form-group">
+        <label>{{ "Name" | translate }}</label>
+        <input type="text" class="form-control" name="name" formControlName="name" required
+          placeholder="{{ 'Name' | translate }}" />
+      </div>
+
+      <div class="form-group">
+        <label>{{ "Description" | translate }}</label>
+        <input type="text" class="form-control" name="desc" formControlName="desc" required
+          placeholder="{{ 'Description' | translate }}" />
+      </div>
+
+
+      <div class="form-group">
+        <label> {{'Categories' | translate}} </label>
+        <select class="form-control" name="category" formControlName="category" required>
+          <option value="" selected disabled>{{'Categories' | translate}} </option>
+          <option *ngFor="let item of categories; let i=index" value="{{item._id}}">{{item.name}}
+          </option>
+        </select>
+
+      </div>
+      <div class="">
+        <div class="form-group">
+          <label for="">{{'UploadImage' | translate}}</label>
+          <span>{{percentDone}}</span>
+          <input type="file" class="form-control" (change)="UploadImage($event)" name="image" />
+          <div>{{ uploadPercent | async }}</div>
+          <!-- <a [href]="downloadURL | async">{{ downloadURL | async }}</a> -->
+
+        </div>
+        <div class="card-image">
+          <img *ngIf="imageURL || formGroup.get('image')?.value" src="{{imageURL  || formGroup.get('image')?.value}}">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-save" type="submit" [disabled]="formGroup.invalid">
+      {{ "Save" | translate }}
+    </button>
+    <button type="button" class="btn btn-clos" (click)="activeModal.close('Close click')">
+      {{ "Close" | translate }}
+    </button>
+
+  </div>
+</form>
