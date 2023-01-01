@@ -18,8 +18,12 @@
   "Price": "السعر",
   "Categories":"الاقسام",
   "Products":"المنتجات",
+  "Product":"المنتج",
+  "AboutUs":"من نحن",
+  "ContactUs":"اتصل بنا",
   "Users":"المستخدمون",
   "Orders":"الطلبات",
+  "NotFoundData":"لاتوجد بيانات",
   "AreYouWantToDelete":"هل تريد الحذف؟"
 
 

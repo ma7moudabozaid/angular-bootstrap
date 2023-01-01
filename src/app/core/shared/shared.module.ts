@@ -20,6 +20,7 @@ import { SharedComponent } from './shared.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ModalDeleteComponent } from './components/modal-delete/modal-delete.component';
+import { CardProductComponent } from './components/card-product/card-product.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ModalDeleteComponent } from './components/modal-delete/modal-delete.com
     NotFoundComponent,
     LoadingComponent,
     ModalDeleteComponent,
+    CardProductComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +58,7 @@ import { ModalDeleteComponent } from './components/modal-delete/modal-delete.com
     NotFoundComponent,
     LoadingComponent,
     ModalDeleteComponent,
+    CardProductComponent,
   ],
   providers: [],
 })

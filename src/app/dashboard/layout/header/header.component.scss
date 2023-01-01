@@ -9,6 +9,7 @@
     font-weight: 600;
     color: #fff;
     text-transform: capitalize;
+    cursor: pointer;
   }
 
   .btn-bar {
@@ -62,7 +63,7 @@
 }
 
 @media (max-width: 768px) {
-  .btn-bar {
+  .btn-bars {
     display: block;
   }
   .side-menu {

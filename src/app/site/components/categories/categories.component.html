@@ -1,0 +1,15 @@
+<div class="card-category" *ngIf="categories; let categories; else: loading">
+  <h3>{{'Categories' | translate}}</h3>
+  <br>
+  <a *ngFor="let item of categories ; let i = index" routerLink="/products/{{item._id}}">
+    <!-- <i [class]="item.image"></i>  -->
+    <i class="fa-regular fa-snowflake"></i> {{ item.name }}
+  </a>
+</div>
+<div class="">
+  <ng-template #loading>
+    <div class="">
+      <app-loading></app-loading>
+    </div>
+  </ng-template>
+</div>

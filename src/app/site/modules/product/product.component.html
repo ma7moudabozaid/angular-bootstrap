@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <div class="card-title mt-3">
+        <h1>{{ "Product" | translate }}</h1>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="row" *ngIf="product; let product; else: loading">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+          <div class="card-product">
+            <div class="card-img"> <img [src]="product.image" alt=""> </div>
+            <p>{{ product.price }} </p>
+            <!-- {{'USD' | translate}} -->
+            <h3>{{ product.name }}</h3>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ng-template #loading>
+            <div class="">
+              <app-loading></app-loading>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

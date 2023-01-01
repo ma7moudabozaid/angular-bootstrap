@@ -16,6 +16,7 @@
               <th>#</th>
               <th>{{ "Image" | translate }}</th>
               <th>{{ "Name" | translate }}</th>
+              <th>{{ "Price" | translate }}</th>
               <th>{{ "Category" | translate }}</th>
               <th>{{ "Description" | translate }}</th>
               <th>{{ "Actions" | translate }}</th>
@@ -27,6 +28,7 @@
               <td>{{ i + 1 }}</td>
               <td> <img [src]="item.image" width="50px" alt=""> </td>
               <td>{{ item.name }}</td>
+              <td>{{ item.price }}</td>
               <td>{{ item.category.name }}</td>
               <td>{{ item.desc }}</td>
               <td>

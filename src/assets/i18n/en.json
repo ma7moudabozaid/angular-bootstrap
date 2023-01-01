@@ -18,7 +18,11 @@
   "Price": "Price",
   "Categories":"Categories",
   "Products":"Products",
+  "Product":"Product",
+  "AboutUs":"About Us",
+  "ContactUs":"Contact Us",
   "Users":"Users",
   "Orders":"Orders",
+  "NotFoundData":"Not Found Data",
   "AreYouWantToDelete":"Are You Want To Delete ?"
 }

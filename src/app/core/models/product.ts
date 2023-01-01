@@ -2,6 +2,7 @@ export interface Product {
   publish: boolean;
   _id: string;
   name: string;
+  price: string;
   desc: string;
   image: string;
   category: Category;

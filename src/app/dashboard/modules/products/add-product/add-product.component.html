@@ -13,13 +13,16 @@
         <input type="text" class="form-control" name="name" formControlName="name" required
           placeholder="{{ 'Name' | translate }}" />
       </div>
-
+      <div class="form-group">
+        <label>{{ "Price" | translate }}</label>
+        <input type="text" class="form-control" name="price" formControlName="price" required
+          placeholder="{{ 'Price' | translate }}" />
+      </div>
       <div class="form-group">
         <label>{{ "Description" | translate }}</label>
         <input type="text" class="form-control" name="desc" formControlName="desc" required
           placeholder="{{ 'Description' | translate }}" />
       </div>
-
 
       <div class="form-group">
         <label> {{'Categories' | translate}} </label>

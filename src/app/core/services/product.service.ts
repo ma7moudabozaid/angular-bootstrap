@@ -30,6 +30,13 @@ export class ProductService {
       })
     );
   }
+  getByCat(id: string): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl + 'getByCat/' + id);
+  }
+  GetById(id: string): Observable<Product[]> {
+    return this.http.get<Product[]>(this.apiUrl + 'GetById/' + id);
+  }
+
   addProduct(payload: Product): Observable<Product> {
     return this.http.post<Product>(this.apiUrl + 'add', payload);
   }
