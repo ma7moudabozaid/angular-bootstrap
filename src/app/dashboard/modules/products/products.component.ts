@@ -39,8 +39,9 @@ export class ProductsComponent implements OnInit {
     const modalRef = this.modalService.open(AddProductComponent);
     modalRef.componentInstance.name = 'add';
     modalRef.componentInstance.loadData.subscribe((result: any) => {
-      this.modalService.dismissAll();
+      console.log('sdfsdf');
       this.getData();
+      this.modalService.dismissAll();
     });
   }
 

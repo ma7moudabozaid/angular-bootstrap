@@ -11,9 +11,7 @@ import { CategoryService } from '../../../../core/services/category.service';
 })
 export class AddCategoryComponent implements OnInit {
   @Input() item: any;
-
   @Output() loadData = new EventEmitter<string>();
-
   formGroup!: FormGroup;
 
   constructor(
@@ -30,7 +28,6 @@ export class AddCategoryComponent implements OnInit {
 
   ngOnInit() {
     this.getFormData();
-
     if (this.item) {
       this.formGroup.patchValue(this.item);
     }
@@ -44,14 +41,14 @@ export class AddCategoryComponent implements OnInit {
     });
   }
 
-  CreatData() {
+  creatData() {
     if (this.formGroup.value._id == 0) {
-      this.AddData();
+      this.addData();
     } else {
       this.editData();
     }
   }
-  AddData() {
+  addData() {
     return this.categoryService
       .addCategory(this.formGroup.value)
       .subscribe((response: any) => {
@@ -59,7 +56,7 @@ export class AddCategoryComponent implements OnInit {
           this.sharedService.toastrSuccess('Done');
           this.formGroup.reset();
           this.getFormData();
-          this.loadData.emit(response);
+          this.loadData.emit();
           this.modalService.dismissAll();
         } else {
           this.sharedService.toastrError('Error');
@@ -75,7 +72,7 @@ export class AddCategoryComponent implements OnInit {
           this.sharedService.toastrSuccess('Done');
           this.formGroup.reset();
           this.getFormData();
-          this.loadData.emit(response);
+          this.loadData.emit();
         } else {
           this.sharedService.toastrError('Error');
         }

@@ -59,8 +59,6 @@ export class AddProductComponent implements OnInit {
     }
   }
   AddData() {
-    console.log(this.formGroup.value);
-
     return this.productService
       .addProduct(this.formGroup.value)
       .subscribe((response: any) => {
@@ -68,7 +66,7 @@ export class AddProductComponent implements OnInit {
           this.sharedService.toastrSuccess('Done');
           this.formGroup.reset();
           this.getFormData();
-          this.loadData.emit(response);
+          this.loadData.emit();
         } else {
           this.sharedService.toastrError('Error');
         }
