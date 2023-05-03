@@ -16,7 +16,8 @@
   a {
     display: block;
     margin-bottom: 5px;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
+    border-radius: 6px;
     color: #000;
     font-size: 18px;
     font-weight: 600;
@@ -25,5 +26,10 @@
     i {
       margin-inline-end: 15px;
     }
+  }
+  a:hover {
+    background-color: #f44336;
+    color: #fff;
+
   }
 }
