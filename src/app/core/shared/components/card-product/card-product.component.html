@@ -12,9 +12,11 @@
           <a routerLink="/product/{{item._id}}">
             <div class="card-product">
               <div class="card-img"> <img [src]="item.image" alt=""> </div>
+            <div class="info">
               <p>{{ item.price }} </p>
               <!-- {{'USD' | translate}} -->
               <h3>{{ item.name }}</h3>
+            </div>
             </div>
           </a>
         </div>

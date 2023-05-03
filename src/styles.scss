@@ -28,12 +28,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   h1 {
     font-size: 28px;
     font-weight: 600;
     margin: 0px;
-    color: #3c91e6;
+    color: #000;
   }
   .btn {
     background: #1a536d;
@@ -131,10 +131,11 @@ a {
 }
 
 .card-product {
-  border: 1px solid #ccc;
+  // border: 1px solid #ccc;
   margin-bottom: 30px;
+  box-shadow: 1px 1px 2px 1px #d1d1d1;
   .card-img {
-    height: 200px;
+    height: 150px;
     overflow: hidden;
     display: flex;
     align-items: center;
