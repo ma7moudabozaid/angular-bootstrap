@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://api.fanskora.com/api/'
+  apiUrl: 'https://fanskora-api.vercel.app/api/'
+
 };

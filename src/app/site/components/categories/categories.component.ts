@@ -22,7 +22,7 @@ export class CategoriesComponent implements OnInit {
     getCategory() {
       return this.categoryService.getCategory().subscribe((response: any) => {
         if (response) {
-          this.categories = response.categories;
+          this.categories = response;
         }
       });
     }

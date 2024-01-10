@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-    apiUrl: 'https://api.fanskora.com/api/'
+    apiUrl: 'https://fanskora-api.vercel.app/api/'
     // apiUrl: "http://localhost:3000/api/",
 };
 
